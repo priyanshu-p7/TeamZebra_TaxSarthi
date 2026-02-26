@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
    <link rel="stylesheet" href="calculator.css">
-   <link rel="stylesheet" href="taxSarthi_bot/bot.css">
 </head>
 <body>
     <div class="animated-bg" id="animatedBg"></div>
@@ -16,7 +15,7 @@
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-content">
             <div class="loading-spinner"></div>
-            <h3>🤖 Gemini AI is Analyzing</h3>
+            <h3>🤖 TaxSarthi is Analyzing</h3>
             <p>Scanning government databases for optimal tax strategies...</p>
             <div class="loading-progress">
                 <div class="loading-progress-bar"></div>
@@ -25,7 +24,7 @@
     </div>
 
     <!-- Export Menu -->
-    <button class="export-btn" onclick="toggleExportMenu()">
+    <!-- <button class="export-btn" onclick="toggleExportMenu()">
         <i class="fas fa-download"></i>
     </button>
     <div class="export-menu" id="exportMenu">
@@ -41,7 +40,7 @@
         <button onclick="shareReport()">
             <i class="fas fa-share-alt" style="color: #9c27b0;"></i> Share Report
         </button>
-    </div>
+    </div> -->
 
     <div class="calculator-container">
         <!-- Header -->
@@ -282,42 +281,7 @@
             </div>
         </div>
     </div>
-<div id="chatbot-icon" onclick="toggleChatbot()">&#128172;</div>
-
-<!-- Floating Chatbot Window -->
-<div class="chat-container" id="chatbot-window">
-  <div class="chat-box" id="chatBox">
-
-    <div class="msg bot">
-      Hi! Ask me about tax related queries and about subsidies.
-    </div>
-
-    <!-- Suggested Questions -->
-    <div class="suggestions" id="suggestions">
-      <div class="suggestion-item" onclick="insertSuggestion(this)">
-        What is income tax?
-      </div>
-      <div class="suggestion-item" onclick="insertSuggestion(this)">
-        How can I save tax under 80C?
-      </div>
-      <div class="suggestion-item" onclick="insertSuggestion(this)">
-        What is standard deduction?
-      </div>
-      <div class="suggestion-item" onclick="insertSuggestion(this)">
-        Which schemes are available for students?
-      </div>
-    </div>
-
-  </div>
-
-  <div class="input-area">
-    <input type="text" id="userInput" placeholder="Type your question..." />
-    <button id="sendBtn" onclick="sendMessage()">Send</button>
-  </div>
-</div>
- <script>window.GEMINI_API_KEY = "AIzaSyBqVEDlmwgTpDNRo68V8_K1vCQ45PpOXLY";</script>
 
   <script src="calculator.js"></script>
-  <script src="taxSarthi_bot/bot.js"></script>
 </body>
 </html>

@@ -356,7 +356,7 @@
         // Gemini API Integration
         async function getGeminiRecommendations(income, oldTax, newTax, age, employment, invest80c, health80d) {
             const API_KEY = 'AIzaSyDB_yQmvhgGZHpM0TG5WmZx7KCoPm-tRXw';
-            const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`;
+            const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${'AIzaSyDB_yQmvhgGZHpM0TG5WmZx7KCoPm-tRXw'}`;
 
             const prompt = `As a tax expert for India, provide personalized recommendations for this taxpayer:
 

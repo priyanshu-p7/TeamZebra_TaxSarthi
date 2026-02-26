@@ -1,8 +1,18 @@
+:root {
+  --primary: #667eea;
+  --secondary: #764ba2;
+  --accent: #ffd700;
+  --success: #4caf50;
+  --warning: #ff9800;
+  --danger: #f44336;
+  --dark: #2c3e50;
+  --light: #f8f9fa;
+}
 /* ================= GLOBAL ================= */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #000;   /* Full black background */
+  background: var(--dark);
 }
 
 /* ================= CHAT ICON ================= */
@@ -10,29 +20,29 @@ body {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  background: #ffffff;
-  color: #000;
+  background: var(--primary);
+  color: var(--light);
   font-size: 22px;
   padding: 14px 16px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
   transition: all 0.3s ease;
 }
 
 #chatbot-icon:hover {
   transform: scale(1.1);
-  background: #f0f0f0;
+  background: var(--secondary);
 }
 
 /* ================= CHAT CONTAINER ================= */
 .chat-container {
   width: 420px;
   height: 550px;
-  background: #111;
+  background: var(--dark);
   border-radius: 20px;
-  box-shadow: 0 20px 60px rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.2);
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -40,18 +50,18 @@ body {
   right: 25px;
   display: none;
   z-index: 999;
-  border: 1px solid #222;
+  border: 1px solid var(--primary);
   overflow: hidden;
 }
 
-/* ================= CHAT HEADER (optional if you add one) ================= */
+/* ================= CHAT HEADER ================= */
 .chat-header {
-  background: #000;
-  color: #fff;
+  background: var(--primary);
+  color: var(--light);
   padding: 15px;
   text-align: center;
   font-weight: 600;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid var(--secondary);
 }
 
 /* ================= CHAT BOX ================= */
@@ -69,7 +79,7 @@ body {
   width: 6px;
 }
 .chat-box::-webkit-scrollbar-thumb {
-  background: #333;
+  background: var(--secondary);
   border-radius: 10px;
 }
 
@@ -87,19 +97,19 @@ body {
 
 /* USER MESSAGE */
 .user {
-  background: #ffffff;
-  color: #000;
+  background: var(--primary);
+  color: var(--light);
   align-self: flex-end;
   border-bottom-right-radius: 5px;
 }
 
 /* BOT MESSAGE */
 .bot {
-  background: #1c1c1c;
-  color: #ffffff;
+  background: var(--secondary);
+  color: var(--light);
   align-self: flex-start;
   border-bottom-left-radius: 5px;
-  border: 1px solid #333;
+  border: 1px solid var(--primary);
 }
 
 /* ================= INPUT AREA ================= */
@@ -107,8 +117,8 @@ body {
   display: flex;
   padding: 15px;
   gap: 10px;
-  background: #000;
-  border-top: 1px solid #222;
+  background: var(--dark);
+  border-top: 1px solid var(--primary);
 }
 
 /* INPUT FIELD */
@@ -116,23 +126,23 @@ input {
   flex: 1;
   padding: 12px 18px;
   border-radius: 30px;
-  border: 1px solid #333;
-  background: #111;
-  color: #fff;
+  border: 1px solid var(--primary);
+  background: var(--dark);
+  color: var(--light);
   font-size: 14px;
   outline: none;
   transition: all 0.3s ease;
 }
 
 input:focus {
-  border-color: #ffffff;
+  border-color: var(--accent);
 }
 
 /* SEND BUTTON */
 button {
   padding: 12px 22px;
-  background: #ffffff;
-  color: #000;
+  background: var(--accent);
+  color: var(--dark);
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -141,14 +151,15 @@ button {
 }
 
 button:hover {
-  background: #e5e5e5;
+  background: var(--warning);
   transform: translateY(-2px);
 }
 
 /* ================= TYPING EFFECT ================= */
 .typing {
   font-style: italic;
-  color: #aaa;
+  color: var(--light);
+  opacity: 0.7;
 }
 
 /* ================= ANIMATIONS ================= */
@@ -172,21 +183,18 @@ button:hover {
 }
 
 .suggestion-item {
-  background: #1a1a1a;
-  color: #fff;
+  background: var(--secondary);
+  color: var(--light);
   padding: 8px 14px;
   border-radius: 20px;
   font-size: 13px;
   cursor: pointer;
-  border: 1px solid #333;
+  border: 1px solid var(--primary);
   transition: all 0.3s ease;
 }
 
 .suggestion-item:hover {
-  background: #ffffff;
-  color: #000;
+  background: var(--accent);
+  color: var(--dark);
   transform: scale(1.05);
 }
-
-
-
