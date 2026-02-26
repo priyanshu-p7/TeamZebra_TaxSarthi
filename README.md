@@ -6,11 +6,11 @@ Team Zebra (pranavmac13)
 ## 💡 Project Name
 TaxSarthi
 
-## 🏆 Track
-2
+## 🏆 Track - 2
 
-## 📌 Problem Statement
-8: Smart Tax or Subsidy Recommendation System**
+
+## 📌 Problem Statement - 8
+ Smart Tax or Subsidy Recommendation System**
 
 ## 👑 Team Leader
 Pranav Kumar Singh
