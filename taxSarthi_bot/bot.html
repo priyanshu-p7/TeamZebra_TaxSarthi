@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="bot.css">
 
 <!-- Bot Icon (floating toggle) -->
-<div id="chatbot-icon" onclick="toggleChatbot()">??</div>
+<div id="chatbot-icon" onclick="toggleChatbot()">&#128172;</div>
 
 <!-- Floating Chatbot Window -->
 <div class="chat-container" id="chatbot-window">
@@ -26,9 +26,6 @@
       <div class="suggestion-item" onclick="insertSuggestion(this)">
         Which schemes are available for students?
       </div>
-      <div class="suggestion-item" onclick="insertSuggestion(this)">
-        Tell me about farmer subsidies
-      </div>
     </div>
 
   </div>
@@ -38,5 +35,6 @@
     <button id="sendBtn" onclick="sendMessage()">Send</button>
   </div>
 </div>
+ <script>window.GEMINI_API_KEY = "AIzaSyBqVEDlmwgTpDNRo68V8_K1vCQ45PpOXLY";</script>
 
 <script src="bot.js" defer></script>
