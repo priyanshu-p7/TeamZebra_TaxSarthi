@@ -96,6 +96,29 @@ function setLoading(loading) {
   if (sendBtn) sendBtn.disabled = loading;
   if (input) input.disabled = loading;
 }
+function toSimpleBullets(text) {
+  const clean = (text || "").replace(/\*/g, "").trim();
+  if (!clean) return "";
+
+  const lines = clean
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .map((line) => line.replace(/^[-�\d.)\s]+/, "").trim())
+    .filter(Boolean);
+
+  if (lines.length >= 2) {
+    return lines.slice(0, 6).map((line) => `\u2022 ${line}`).join("\n");
+  }
+
+  const sentences = clean
+    .split(/(?<=[.!?])\s+/)
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .slice(0, 6);
+
+  return sentences.map((s) => `\u2022 ${s}`).join("\n");
+}
 
 async function tryGenerateWithModel(modelName, prompt) {
   console.log(`Sending request to Gemini using ${modelName}...`);
@@ -191,13 +214,19 @@ async function processQuery(message) {
       return;
     }
 
-    const prompt = `You are an expert Indian tax advisor.\nUser Question: "${message}"\nProvide a concise answer in simple language. Do not use markdown asterisks.`;
+    const prompt = `You are an expert Indian tax advisor.
+User Question: "${message}"
+Answer in very simple Indian English.
+Return 4 to 6 short bullet points.
+Each bullet should be one sentence.
+No markdown symbols like * or #.
+Use plain lines starting with a bullet point.`;
 
     const result = await generateWithFallback(prompt);
     const botReply = result?.text?.trim();
 
     if (botReply) {
-      addMessage("bot", botReply.replace(/\*/g, ""));
+      addMessage("bot", toSimpleBullets(botReply));
     } else {
       addMessage("bot", "Unable to process your request right now. Please try again.");
     }
@@ -209,3 +238,6 @@ async function processQuery(message) {
     setLoading(false);
   }
 }
+
+
+

@@ -81,6 +81,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   word-wrap: break-word;
+  white-space: pre-line;
   animation: fadeIn 0.3s ease-in-out;
 }
 
@@ -186,3 +187,6 @@ button:hover {
   color: #000;
   transform: scale(1.05);
 }
+
+
+
