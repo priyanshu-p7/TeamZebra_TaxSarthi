@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaxSage India | Smart Tax & Subsidy Recommendation Engine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    
+    <div class="floating-element float1"></div>
+    <div class="floating-element float2"></div>
+    <div class="floating-element float3"></div>
+
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">₹</div>
+                <span class="logo-text">TaxSage India</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <div class="hero-content">
+                <div class="badge">🚀 FY 2025-26 Updated</div>
+                <h1>
+                    Smart Tax & <span>Subsidy</span><br>
+                    Recommendation Engine
+                </h1>
+                <p>
+                    Navigate the complex Indian tax system with AI-powered insights. 
+                    Compare Old vs New Regime, discover hidden subsidies, and maximize 
+                    your savings with personalized recommendations.
+                </p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary" onclick="navigateToCalculator()">
+                        Calculate Your Tax →
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToFeatures()">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <div class="floating-card card1">
+                        <div class="card-icon">💰</div>
+                        <div class="card-value">Smart Savings</div>
+                        <div class="card-label">AI Optimized</div>
+                    </div>
+                    <div class="floating-card card2">
+                        <div class="card-icon">📊</div>
+                        <div class="card-value">Compare</div>
+                        <div class="card-label">Old vs New</div>
+                    </div>
+                    <div class="floating-card card3">
+                        <div class="card-icon">🎯</div>
+                        <div class="card-value">Discover</div>
+                        <div class="card-label">Subsidies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="features" class="features">
+            <h2 class="section-title">Why Choose TaxSage?</h2>
+            <p class="section-subtitle">
+                Powered by Gemini AI for intelligent, personalized tax recommendations
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Regime Comparison</h3>
+                    <p>Instant side-by-side comparison of Old vs New tax regime with detailed breakdown</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎁</div>
+                    <h3>Subsidy Discovery</h3>
+                    <p>AI-powered identification of government subsidies you might be missing out on</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Visual Analytics</h3>
+                    <p>Beautiful graphs and charts to visualize your tax savings and recommendations</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Optimize Your Taxes?</h2>
+            <p>Get personalized recommendations from Gemini AI</p>
+            <button class="btn btn-primary" onclick="navigateToCalculator()">
+                Start Calculating Now →
+            </button>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 TaxSage India. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function navigateToCalculator() {
+            document.getElementById('loadingSpinner').style.display = 'block';
+            setTimeout(() => {
+                window.location.href = 'calculator.html';
+            }, 500);
+        }
+
+        function scrollToFeatures() {
+            document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
