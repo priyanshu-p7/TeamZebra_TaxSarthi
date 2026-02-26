@@ -1,0 +1,42 @@
+<!-- Link to bot.css -->
+<link rel="stylesheet" href="bot.css">
+
+<!-- Bot Icon (floating toggle) -->
+<div id="chatbot-icon" onclick="toggleChatbot()">??</div>
+
+<!-- Floating Chatbot Window -->
+<div class="chat-container" id="chatbot-window">
+  <div class="chat-box" id="chatBox">
+
+    <div class="msg bot">
+      Hi! Ask me about tax related queries and about subsidies.
+    </div>
+
+    <!-- Suggested Questions -->
+    <div class="suggestions" id="suggestions">
+      <div class="suggestion-item" onclick="insertSuggestion(this)">
+        What is income tax?
+      </div>
+      <div class="suggestion-item" onclick="insertSuggestion(this)">
+        How can I save tax under 80C?
+      </div>
+      <div class="suggestion-item" onclick="insertSuggestion(this)">
+        What is standard deduction?
+      </div>
+      <div class="suggestion-item" onclick="insertSuggestion(this)">
+        Which schemes are available for students?
+      </div>
+      <div class="suggestion-item" onclick="insertSuggestion(this)">
+        Tell me about farmer subsidies
+      </div>
+    </div>
+
+  </div>
+
+  <div class="input-area">
+    <input type="text" id="userInput" placeholder="Type your question..." />
+    <button id="sendBtn" onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<script src="bot.js" defer></script>
