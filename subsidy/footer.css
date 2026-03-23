@@ -1,0 +1,62 @@
+.myscheme-footer {
+    background-color: #141414;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 40px 120px ;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+    max-width: 250px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  .footer-section p,
+  .footer-section li {
+    color: #ccc;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 4px 0;
+    list-style: none;
+  }
+  
+  .footer-section ul {
+    padding: 0;
+  }
+  
+  .footer-section li {
+    margin-bottom: 8px;
+  }
+  
+  .highlight {
+    color: #2dd4bf;
+    font-weight: bold;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 12px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    color: #aaa;
+  }
+  

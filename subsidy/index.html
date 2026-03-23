@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaxSarthi</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="Bot.css">
+    <link rel="stylesheet" href="footer.css">
+    <!-- <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" /> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo-group">
+          <img src="assets/logo.png" alt="Main Logo" class="main-logo">
+          <div class="logo-text">
+              <span>Tax</span>
+              <span>Sarthi</span>
+          </div>
+          <img src="assets/digital-india-logo.svg" alt="Digital India" class="digital-india-logo">
+      </div>
+
+      <div class="search-container">
+          <input type="text" class="search-input" placeholder="Search schemes...">
+          <i class="fas fa-search search-icon"></i>
+      </div>
+
+      <div class="nav-controls">
+        <div id="google_translate_element" style="display: inline-block; font-size: 14px;"></div>
+          <button class="theme-toggle" aria-label="Toggle theme">
+              <i class="fas fa-moon"></i>
+          </button>
+      </div>
+
+
+      
+      <button class="hamburger" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+      </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+      <div class="search-container">
+          <input type="text" class="search-input" placeholder="Search schemes...">
+          <i class="fas fa-search search-icon"></i>
+      </div>
+
+      
+      
+      <div class="nav-controls">
+          <select class="language-selector">
+              <option value="en">English</option>
+              <option value="hi">हिन्दी</option>
+          </select>
+          <button class="theme-toggle">
+              <i class="fas fa-moon"></i> Dark Mode
+          </button>
+      </div>
+  </div>
+  <div class="menu-backdrop"></div>
+
+
+  <!-- main content <section></section> -->
+
+    <div class="gradient"></div>
+    <section class="hero">
+      <div class="left">
+        <!-- <img style="height: 600px; margin-top: -60px;" src="assets/farmerr-hero.png" alt="Farmer Image"/> -->
+      </div>
+      <div class="right">
+        <h1><span>Discover</span> government<br />schemes made for you...</h1>
+        <p>
+          Personalized government schemes at your fingertips. <br />
+          Find out what you're eligible for today.
+        </p>
+
+        <br />
+      </div>
+      <div class="hero-bottom">
+        #GOVERNMENTSCHEMES / #SCHEMESFORYOU
+      <a href="findScheme.html"> <button class="cta-button">Find Schemes Made For You →</button></a>
+      </div>
+
+      
+    </section>
+
+    <section class="below">
+      <div class="extra-selection">
+
+        <main>
+          <h1>
+            Find schemes based on categories
+          </h1>
+          <section class="grid">
+            <div class="category">
+              <img src="assets/Agriculture.svg" alt="Agriculture Icon" />
+              <h3>Agriculture, Rural & Environment</h3>
+            </div>
+
+            <div class="category">
+              <img src="assets/Education.svg" alt="Education Icon" />
+              
+              <h3>Education & Learning</h3>
+            </div>
+
+            <div class="category">
+              <img src="assets/Health.svg" alt="Health Icon" />
+              
+              <h3>Health & Wellness</h3>
+            </div>
+
+            <div class="category">
+              <img src="assets/Banking.svg" alt="Banking Icon" />
+              <h3>Banking,Financial Services and Insurance</h3>
+            </div>
+
+            <div class="category">
+              <img src="assets/Housing.svg" alt="Housing Icon" />
+              <h3>Housing & Shelter</h3>
+            </div>
+
+            <div class="category">
+              <img src="assets/Public Safety.svg" alt="Agriculture Icon" />
+              <h3>Public Safety,Law & Justice</h3>
+            </div>
+
+            <div class="category">
+              <img src="assets/Science.svg" alt="Agriculture Icon" />
+              <h3>Science, IT & Communications</h3>
+            </div>
+
+            <div class="category">
+              <img src="assets/Skills.svg" alt="Agriculture Icon" />
+              <h3>Skills & Employment</h3>
+            </div>
+
+            <div class="category">
+              <img src="assets/Utility.svg" alt="Agriculture Icon" />
+              <h3>Utility & Sanitation</h3>
+            </div>
+
+            <div class="category">
+              <img src="assets/Sports.svg" alt="Agriculture Icon" />
+              <h3>Sports & Culture</h3>
+            </div>
+          </section>
+        </main>
+      </div>
+    </section>
+    <!-- Bot Icon (floating toggle) -->
+<div id="chatbot-icon" onclick="toggleChatbot()">💬</div>
+
+<!-- Floating Chatbot Window -->
+<div class="chat-container" id="chatbot-window">
+  <div class="chat-box" id="chatBox">
+    <div class="msg bot">Hi! Ask me about government schemes.</div>
+  </div>
+  <div class="input-area">
+    <input type="text" id="userInput" placeholder="Type your question..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+    <footer class="myscheme-footer">
+      <div class="footer-container">
+        <!-- Branding Section -->
+        <div class="footer-section branding">
+          <p>© 2025 <span class="highlight">Tax</span>Sarthi</p>
+          <p><strong>Powered by:</strong> Digital India</p>
+          <p>
+            Digital India Corporation (DIC)<br>
+            Ministry of Electronics & IT (MeitY)<br>
+            Government of India
+          </p>
+          <p class="social-icons">LinkedIn | Twitter | Facebook | Instagram</p>
+        </div>
+    
+        <!-- Quick Links Section -->
+        <div class="footer-section quick-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Screen Reader</li>
+            <li>Accessibility Statement</li>
+            <li>FAQs</li>
+            <li>Disclaimer</li>
+            <li>Terms & Conditions</li>
+          </ul>
+        </div>
+    
+        <!-- Useful Links Section -->
+        <div class="footer-section useful-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li>Saral Portal</li>
+            <li>DigiLocker</li>
+            <li>UMANG App</li>
+            <li>India.gov.in</li>
+            <li>Data.gov.in</li>
+          </ul>
+        </div>
+    
+        <!-- Contact Info Section -->
+        <div class="footer-section contact">
+          <h4>Get in touch</h4>
+          <p>4th Floor, NeGD, Electronics Niketan,<br>
+             6 CGO Complex, Lodhi Road, New Delhi - 110003, India</p>
+          <p>Email: myscheme[at]digitalindia[dot]gov[dot]in</p>
+          <p>Phone: (011) 24303714 (9:00 AM to 5:30 PM)</p>
+        </div>
+      </div>
+    
+      <div class="footer-bottom">
+        <p>© Copyright 2025 <span class="highlight">Tax</span>Sarthi</p>
+      </div>
+    </footer>
+
+
+    <style>
+      .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+        display: none !important;
+      }
+      body {
+        top: 0px !important;
+      }
+      .goog-te-gadget {
+        font-family: inherit !important;
+        font-size: 14px;
+        color: #333;
+      }
+    </style>
+    
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement(
+            {
+              pageLanguage: 'en',
+              includedLanguages: 'en,hi,bho,mr,te,bn,kn,gu,ta,ml,pa,ur',
+              layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+            },
+            'google_translate_element'
+          );
+        }
+      </script>
+      <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+      // Auto-select Hindi language on page load
+      window.onload = function() {
+        setTimeout(function() {
+          const select = document.querySelector('select.goog-te-combo');
+          if (select) {
+            select.value = 'hi';
+            select.dispatchEvent(new Event('change'));
+          }
+        }, 1000);
+      };
+    
+      
+    </script>
+    <script src="Bot.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
